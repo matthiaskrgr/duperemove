@@ -199,7 +199,7 @@ int add_file(const char *name, int dirfd)
 		goto out;
 	}
 
-	if (st.st_size < blocksize) {
+	if (st.st_size < blocksize && debug) {
 		fprintf(stderr, "Skipping too small file %s\n", path);
 		goto out;
 	}

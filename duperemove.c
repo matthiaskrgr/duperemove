@@ -229,6 +229,7 @@ static int parse_options(int argc, char **argv)
 			serialize_fname = strdup(optarg);
 			break;
 		case HASHFILE_OPTION:
+			printf("Warning: usage of hashfile, major slowdown expected.\n");
 			update_hashes = 1;
 			serialize_fname = strdup(optarg);
 			break;

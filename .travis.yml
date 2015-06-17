@@ -14,7 +14,7 @@ env:
 before_install:
 # install needed deps
  - sudo apt-get update -qq
- - sudo apt-get install -qq sqlite
+ - sudo apt-get install -qq sqlite linux-libc-dev
 
 script:
  - make

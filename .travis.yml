@@ -1,0 +1,23 @@
+language: cpp
+
+compiler:
+  - clang
+  - gcc
+
+env:
+  global:
+    -
+    - CXXFLAGS="-O2"
+  matrix:
+
+
+before_install:
+# install needed deps
+ - sudo apt-get update -qq
+ - sudo apt-get install -qq sqlite
+
+script:
+ - make
+
+notifications:
+  email: false
